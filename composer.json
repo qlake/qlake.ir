@@ -1,0 +1,27 @@
+{
+	"name": "qlake/qlake",
+	"description": "The Qlake Framework",
+	"keywords": [
+		"qlake", "framework"
+	],
+	"license": "MIT",
+	"type": "project",
+	"authors": [
+		{
+			"name": "Reza Khodadadi",
+			"email": "rezakho@gmail.com",
+			"role": "Founder"
+		}
+	],
+	"require": {
+		"qlake/framework": "@dev",
+		"erusev/parsedown-extra": "~0.7"
+	},
+	"autoload": {
+		"files": [
+		],
+		"psr-4": {
+			"App\\": "app/"
+		}
+	}
+}

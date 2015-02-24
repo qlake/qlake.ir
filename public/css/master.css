@@ -1,0 +1,173 @@
+@font-face{
+	font-family: "octicons";
+	font-style: normal;
+	font-weight: normal;
+	src: url("/fonts/octicons.eot?#iefix") format("embedded-opentype"), url("/fonts/octicons.woff") format("woff"), url("/fonts/octicons.ttf") format("truetype"), url("/fonts/octicons.svg#octicons") format("svg");
+}
+
+
+html,
+body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 16px;
+	color: #525252;
+}
+
+
+
+a{
+	text-decoration: none;
+	color: #26A9B3;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #1C6E72;
+}
+
+.clearfix{
+	clear: both;
+}
+
+#header{
+	height: 60px;
+	background-color: #26A9B3;/*#F1362F*/
+}
+
+.wrapper{
+	margin: auto;
+	width: 1200px;
+	margin-bottom: 100px;
+}
+
+#nav{
+	float: right;
+	width: 250px;
+	padding: 70px 0 0 0;
+}
+
+#content{
+	float: left;
+	width: 930px;
+	padding: 70px 0 0 0;
+}
+
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h5,
+#content h6,
+#content p{
+	text-align: right;
+	direction: rtl;
+}
+
+#content h1{
+	font-size: 48px;
+	margin-top: 0;
+}
+
+#content h2{
+	margin-top: 35px;
+	font-size: 32px;
+	position: relative;
+}
+
+#content h2:hover:before {
+    color: #26A9B3;
+    content: "";
+    font-size: 19px;
+    font-family: octicons;
+    padding: 3px 7px;
+    margin-right: -33px;
+    opacity: 0.6;
+    position: absolute;
+    top: 5px;
+    cursor: pointer;
+}
+
+#content h3{
+	font-size: 18px;
+}
+
+#content p{
+	text-align: justify;
+	margin: 10px 0 20px 0;
+}
+
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h5,
+#content h6{
+	color: #000;
+	direction: rtl;
+}
+
+
+
+#content > ul{
+	direction: rtl;
+	padding: 0;
+	margin: 0;
+	list-style-position: inside;
+}
+
+/**/
+#nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#nav ul li{
+	direction: rtl;
+}
+
+/**/
+
+#nav > ul > li{
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#nav > ul > li a{
+	font-weight: normal;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+#nav > ul > li > ul{
+	margin: 5px 0 30px 0;
+	padding: 5px 0 0 0;
+	border-top: 1px dotted #EEE;
+}
+
+#footer{
+	height: 250px;
+	background-color: #FAFAFA;
+}
+
+#footer nav ul{
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	direction: rtl;
+}
+
+#footer nav ul li{
+	display: inline-block;
+	margin: 0 40px;
+}
+
+/**/
+
