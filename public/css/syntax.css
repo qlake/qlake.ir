@@ -1,4 +1,8 @@
 
+pre code{
+	color: inherit !important;
+}
+
 pre[class*="language-"]:before,
 pre[class*="language-"]:after{
 	content: "";
@@ -19,12 +23,13 @@ code[class*="language-"]{
 }
 
 pre[class*="language-"]{
-	background-color: #F3F3F3;/*#F0F2F1*/
+	background-color: #F0F2F1;/*#F0F2F1*/
 	background-image: none;
 	box-shadow: none;
-	padding: 1.5em 25px;
+	padding: .5em .5em;
 	border-radius: 5px;
 	margin: 10px 0 20px 0;
+	border-left: 2px solid #EFA800;
 }
 
 /**/

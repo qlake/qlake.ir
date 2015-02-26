@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
 	<link rel="stylesheet" href="/css/master.css">
+	<link rel="stylesheet" href="/css/docs.css">
 	<link rel="stylesheet" href="/css/prism.css">
 	<link rel="stylesheet" href="/css/syntax.css">
 </head>
@@ -25,20 +26,7 @@
 	?>
 	</nav>
 	<div id="content">
-	<?php
-		//$Extra = new ParsedownExtra();
-		
-		$path = __DIR__ . "/../../docs/$page.md";
-
-		if (!file_exists($path))
-		{
-			$path = __DIR__ . "/../../docs/under_construction.md";
-		}
-		
-		$md = file_get_contents($path);
-
-		echo $Extra->text($md);
-	?>
+	<?= $content ?>
 	</div>
 	<div class="clearfix"></div>
 </div>

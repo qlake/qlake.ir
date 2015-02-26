@@ -14,7 +14,7 @@
 		}
 	],
 	"require": {
-		"qlake/framework": "@dev",
+		"qlake/framework": "0.1.*@dev",
 		"erusev/parsedown-extra": "~0.7"
 	},
 	"autoload": {

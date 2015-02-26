@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "DAN";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/driod-naskh/DroidNaskh-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/driod-naskh/DroidNaskh-Regular.woff") format("woff"), url("../fonts/driod-naskh/DroidNaskh-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "DAN";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/driod-naskh/DroidNaskh-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/driod-naskh/DroidNaskh-Bold.woff") format("woff"), url("../fonts/driod-naskh/DroidNaskh-Bold.ttf") format("truetype");
+}

@@ -15,11 +15,11 @@
 کیولیک را می توانید به چندین روش نصب کنید، البته پیشنهاد ما، نصب با استفاده از کامپوزر است.
 ### دانلود آخرین نسخه همراه با کتابخانه های وابسته
 
-می توانید از آخرین نسخه پایدار کیولیک (همراه با تمام وابستگی ها) که روزانه برای دانلود در اینجا قرار می دهیم، استفاده کنید.
+می توانید از آخرین نسخه پایدار کیولیک (همراه با تمام وابستگی ها) که روزانه برای دانلود در اینجا قرار داده می شود، استفاده کنید.
 
 ### از طریق کد مخزن
 
-برای استفاده از این روش، ابتدا آخرین نسخه پایدار را از آدرس http://github.com/qlake/qlake/releases دانلود کنید. بسته به نوع فایل دانلود شده، آنرا از حالت فشرده خارج کرده و از خط فرمان سیستم خود، به مسیر مورد نظر بروید. سپس دستور install کامپوزر را اجرا کنید:
+برای استفاده از این روش، ابتدا آخرین نسخه پایدار را از آدرس `http://github.com/qlake/qlake/releases` دانلود کنید. بسته به نوع فایل دانلود شده، آنرا از حالت فشرده خارج کرده و از خط فرمان سیستم خود، به مسیر مورد نظر بروید. سپس دستور install کامپوزر را اجرا کنید:
 
 ```bash
 php composer.phar install
@@ -84,12 +84,3 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [L]
 ```
-### Nginx
-
-On Nginx, the following directive in your site configuration will allow "pretty" URLs:
-```nginx
-location / {
-	try_files $uri $uri/ /index.php?$query_string;
-}
-```
-Of course, when using [Homestead](/docs/5.0/homestead), pretty URLs will be configured automatically.
