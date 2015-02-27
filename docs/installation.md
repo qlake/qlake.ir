@@ -6,7 +6,10 @@
 
 <a name="install-composer"></a>
 ## نصب کامپوزر
-
+```php
+echo Form::email($name, $value = null, $attributes = array());
+echo Form::file($name, $attributes = array());
+```
 کیولیک برای مدیریت وابستگی ها، از کامپوزر استفاده می کند، بنابراین قبل از نصب کیولیک، می بایست کامپوزر را بر روی سیستم خود نصب کرده باشید. جهت اطلاع از روش نصب، [صفحه رسمی کامپوزر](http://getcomposer.org) را ببینید.
 
 <a name="install-qlake"></a>

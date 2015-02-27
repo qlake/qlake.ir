@@ -24,6 +24,15 @@ function sortArrayByArray(Array $array, Array $orderArray) {
 
 
 
+function assets($path)
+{
+	$baseDir = dirname($_SERVER['SCRIPT_NAME']);
+
+	return $baseDir .'/'. $path;
+}
+
+//print_r(assets('css/master.css'));exit;
+
 /*
 $f = function($family, $name)
 {

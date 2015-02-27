@@ -21,7 +21,7 @@ body{
 
 a{
 	text-decoration: none;
-	color: #26A9B3;
+	color: #119AB4;
 }
 
 a:hover{
@@ -35,7 +35,8 @@ a:hover{
 
 #header{
 	height: 60px;
-	background-color: #26A9B3;/*#F1362F*/
+	background-color: #00B5C6;/*#F1362F*/
+	border-bottom: 3px solid #119AB4;
 }
 
 .wrapper{
@@ -80,7 +81,7 @@ a:hover{
 }
 
 #content h2:hover:before {
-    color: #26A9B3;
+    color: #00B5C6;
     content: "";
     font-size: 19px;
     font-family: octicons;
@@ -126,10 +127,10 @@ a:hover{
 
 #content code{
 	background-color: #F0F2F1;
-	padding: 2px 5px;
-	margin: 0 5px;
+	padding: 1px 3px;
+	margin: 0 3px;
 	border-radius: 3px;
-	color: #3A79AD;
+	color: #119AB4;
 }
 /**/
 #nav ul{
