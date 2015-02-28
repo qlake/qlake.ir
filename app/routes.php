@@ -40,11 +40,11 @@ Route::get('docs/{page?}', function($page = 'installation')
 {
 	$md = new ParsedownExtra();
 	
-	$path = __DIR__ . "/../docs/$page.md";
+	$path = __DIR__ . "/../docs/dev/fa/$page.md";
 
 	if (!file_exists($path))
 	{
-		$path = __DIR__ . "/../docs/under_construction.md";
+		$path = __DIR__ . "/../docs/dev/fa/under_construction.md";
 	}
 	
 	$text = file_get_contents($path);

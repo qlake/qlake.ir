@@ -55,6 +55,8 @@
 	- [Schema Builder](/docs/schema)
 	- [Migrations & Seeding](/docs/migrations)
 	- [ردیس](/docs/redis)
+- ابزار ها
+	- [ویرایشگر](editors)
 - توسعه
 	- [هسته](/docs/database)
 	- [سرویس ها](/docs/queries)
