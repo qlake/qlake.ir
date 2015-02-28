@@ -31,58 +31,10 @@ function assets($path)
 	return $baseDir .'/'. $path;
 }
 
-//print_r(assets('css/master.css'));exit;
-
-/*
-$f = function($family, $name)
-{
-	echo $name.' '.$family;
-};
-
-function f($family, $name)
-{
-	echo $name.' '.$family;
-};
-
-class A
-{
-	public static function m($family, $name)
-	{
-		echo $name.' '.$family;
-	}
-}
-
-$a = new A;
-
-call_user_func_array2($f, ['name' => 'reza']);exit;
-
-$f = new ReflectionFunction ($f);
-
-print_r($f->getParameters());
-exit;
-*/
-/**/
-
-
-
-//print_r(sortArrayByArray(['1', 'ali', 'name' => 'reza', 'family' => 'kho'], ['name' , 'family']));exit;
-
-
-/*
-$f = new ReflectionClass($f);
-
-print_r($f->getMethods()[0]->getParameters()[0]->getDefaultValue());
-exit;
-*/
 
 mb_internal_encoding("UTF-8");
 
-/*Route::get('docs', function()
-{
 
-	return View::render('docs')->set('page', 'installation');
-});
-*/
 
 Route::get('docs/{page?}', function($page = 'installation')
 {
@@ -104,6 +56,3 @@ Route::get('docs/{page?}', function($page = 'installation')
 
 
 Route::get('/', 'App\Controllers\Index::sdsdsdfsdf');
-
-
-Route::get('/gfg/gh', null);
