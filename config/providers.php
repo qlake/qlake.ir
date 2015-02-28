@@ -9,7 +9,7 @@
  * Register router singleton provider.
  */
 
-Qlake\Architecture\Iwan::setApplication(Qlake\Application::$instance);
+Qlake\Architecture\Iwan::setApplication(Qlake\Architecture\Application::$instance);
 
 class App extends Qlake\Architecture\Iwan
 {
