@@ -20,7 +20,7 @@
 	<?php
 		$Extra = new ParsedownExtra();
 
-		$md = file_get_contents(__DIR__ . "/../../docs/nav.md");
+		$md = file_get_contents(__DIR__ . "/../../docs/dev/fa/nav.md");
 
 		echo $Extra->text($md);
 	?>

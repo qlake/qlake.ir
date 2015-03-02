@@ -54,5 +54,17 @@ Route::get('docs/{page?}', function($page = 'installation')
 	return View::render('docs')->by('content', $content);
 });
 
+class Str
+{
+	public $driver = '';
 
-Route::get('/', 'App\Controllers\Index::sdsdsdfsdf');
+	function __construct()
+	{
+		$this->driver = Stringy\StaticStringy::create('');	
+	}
+}
+
+Route::get('/', function()
+{
+	echo Stringy\StaticStringy::toUpperCase('sdf sd fs dfsdf sdf ');
+});
