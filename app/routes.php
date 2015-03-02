@@ -64,7 +64,9 @@ class Str
 	}
 }
 
-Route::get('/', function()
+Route::any('/tr', function()
 {
-	echo Stringy\StaticStringy::toUpperCase('sdf sd fs dfsdf sdf ');
+	//echo Stringy\StaticStringy::toUpperCase('sdf sd fs dfsdf sdf ');
+	print_r(\Request::getMethod());
+	print_r(\Request::getAllQuery());
 });

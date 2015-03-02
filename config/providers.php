@@ -31,6 +31,11 @@ class Config extends Qlake\Architecture\Iwan
 	public static $provider = 'config';
 }
 
+class Request extends Qlake\Architecture\Iwan
+{
+	public static $provider = 'request';
+}
+
 
 
 App::singleton('router', function($app)
@@ -43,7 +48,7 @@ App::singleton('router', function($app)
  */
 App::singleton('request', function($app)
 {
-	return new Qlake\Http\Request;
+	return Qlake\Http\Request::capture();
 });
 
 /**
