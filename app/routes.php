@@ -64,9 +64,38 @@ class Str
 	}
 }
 
-Route::any('/tr', function()
+Route::any('/', 'App\Controllers\Index');
+
+
+Route::any('ajax', function()
 {
-	//echo Stringy\StaticStringy::toUpperCase('sdf sd fs dfsdf sdf ');
-	print_r(\Request::getMethod());
-	print_r(\Request::getAllQuery());
+	echo '<pre>';
+	var_dump(file_get_contents('php://input'));exit;
+	echo '
+<hr/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+<button>Send</button>
+<script>
+
+$("button").click(function()
+{
+	$.ajax({
+    type: "POST",
+    url: "",
+    headers: {
+        "SOAPACTION":"first value",
+        "My-Second-Header":"second value"
+    }
+    //OR
+    //beforeSend: function(xhr) { 
+    //  xhr.setRequestHeader("My-First-Header", "first value"); 
+    //  xhr.setRequestHeader("My-Second-Header", "second value"); 
+    //}
+}).done(function(){});
+});
+
+</script>
+
+	';
+	exit;
 });

@@ -4,8 +4,9 @@ namespace App\Controllers;
 
 class Controller
 {
-	public function __missing($args = [])
+	public function __missing($method, $args = [])
 	{
+		print_r($method);
 		print_r($args);
 	}
 
