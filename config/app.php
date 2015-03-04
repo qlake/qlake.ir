@@ -1,5 +1,6 @@
 <?php
 
-return [
+return
+[
 	'title' => 'Qlake PHP Framework',
 ];

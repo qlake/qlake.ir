@@ -1,6 +1,7 @@
 <?php
 
-return [
+return
+[
 	'width' => 200,
 
 	'height' => 80,

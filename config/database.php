@@ -4,15 +4,18 @@ return [
 
 	'default' => 'mysql',
 
-	'connections' => [
+	'connections' =>
+	[
 
-		'sqlite' => [
+		'sqlite' =>
+		[
 			'driver'   => 'sqlite',
 			'database' => __DIR__.'/../database/production.sqlite',
 			'prefix'   => '',
 		],
 
-		'mysql' => [
+		'mysql' =>
+		[
 			'driver'    => 'mysql',
 			'host'      => '127.0.0.1',
 			'database'  => 'lawyer',
@@ -23,7 +26,8 @@ return [
 			'prefix'    => '',
 		],
 
-		'pgsql' => [
+		'pgsql' =>
+		[
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
 			'database' => 'database',
@@ -34,7 +38,8 @@ return [
 			'schema'   => 'public',
 		],
 
-		'sqlsrv' => [
+		'sqlsrv' =>
+		[
 			'driver'   => 'sqlsrv',
 			'host'     => 'localhost',
 			'database' => 'database',

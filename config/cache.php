@@ -1,13 +1,16 @@
 <?php
 
-return [
+return
+[
 	'driver' => 'file',
 
 	'prefix' => '',
 
-	'drivers' => [
+	'drivers' =>
+	[
 
-		'file' => [
+		'file' =>
+		[
 
 			'path' => __DIR__ . '/../storage/cache',
 
@@ -15,7 +18,8 @@ return [
 			
 		],
 
-		'database' => [
+		'database' =>
+		[
 
 			'connection' => null,
 
@@ -23,12 +27,14 @@ return [
 
 		],
 
-		'memcached' => [
+		'memcached' =>
+		[
 
 			['host' => '127.0.0.1', 'port' => 11211, 'weight' => 100],
 
 		],
-		'mongo' => [
+		'mongo' =>
+		[
 
 			'host' => '127.0.0.1',
 
