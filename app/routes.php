@@ -70,6 +70,24 @@ Route::any('/', function()
 	//print_r(\Request::getMethod());
 	//print_r(\Request::getAllQuery());
 
+
+class A
+{
+}
+ 
+class_alias('A', 'B');
+ 
+$object = new B;
+ 
+$r = new ReflectionClass('B');
+var_dump($r->getName());
+
+
+
+	
+
+
+
 	return 54654;
 
 	print_r($_FILES['f1']);
