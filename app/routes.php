@@ -28,7 +28,7 @@ function assets($path)
 {
 	$baseDir = dirname($_SERVER['SCRIPT_NAME']);
 
-	return $baseDir .'/'. $path;
+	return ''. $path;
 }
 
 
@@ -69,6 +69,8 @@ Route::any('/', function()
 	//echo Stringy\StaticStringy::toUpperCase('sdf sd fs dfsdf sdf ');
 	//print_r(\Request::getMethod());
 	//print_r(\Request::getAllQuery());
+
+	return 54654;
 
 	print_r($_FILES['f1']);
 
