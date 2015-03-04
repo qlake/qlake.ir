@@ -70,6 +70,16 @@ Route::any('/', function()
 	//print_r(\Request::getMethod());
 	//print_r(\Request::getAllQuery());
 
+	print_r($_FILES['f1']);
+
+	if (Request::hasFile('f1'))
+	{
+		Request::getFile('f1')->moveTo(__DIR__ . '/../public/files/f1.txt');
+	}
+
+
+	return View::render('form');exit;
+
 	return DB::select('trt as 5', '*')
 		->from('table')
 		->where('user.id', '>', 10)
@@ -78,5 +88,5 @@ Route::any('/', function()
 			$q->where('id', '=', 5)->and('name', '>=', 45);
 			
 		})->toSql();
-		
+
 });
