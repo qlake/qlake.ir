@@ -6,9 +6,9 @@ use View;
 
 class Index extends Controller
 {
-	public static function index()
+	public function index()
 	{
-		echo 'index';exit;
+		echo 'index action is runningff';exit;
 		return View::render('index');
 	}
 
