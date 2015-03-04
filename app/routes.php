@@ -64,9 +64,19 @@ class Str
 	}
 }
 
-Route::any('/tr', function()
+Route::any('/', function()
 {
 	//echo Stringy\StaticStringy::toUpperCase('sdf sd fs dfsdf sdf ');
-	print_r(\Request::getMethod());
-	print_r(\Request::getAllQuery());
+	//print_r(\Request::getMethod());
+	//print_r(\Request::getAllQuery());
+
+	return DB::select('trt as 5', '*')
+		->from('table')
+		->where('user.id', '>', 10)
+		->or(function($q){
+
+			$q->where('id', '=', 5)->and('name', '>=', 45);
+			
+		})->toSql();
+		
 });

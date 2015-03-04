@@ -36,6 +36,11 @@ class Request extends Qlake\Architecture\Iwan
 	public static $provider = 'request';
 }
 
+class DB extends Qlake\Architecture\Iwan
+{
+	public static $provider = 'db';
+}
+
 
 
 App::singleton('router', function($app)
