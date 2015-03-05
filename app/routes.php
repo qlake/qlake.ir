@@ -24,11 +24,11 @@ function sortArrayByArray(Array $array, Array $orderArray) {
 
 
 
-function assets($path)
+function asset($path)
 {
-	$baseDir = dirname($_SERVER['SCRIPT_NAME']);
+	$baseDir = str_replace('\\', '/', dirname(dirname($_SERVER['SCRIPT_NAME'])));
 
-	return ''. $path;
+	return $baseDir .'/'. $path;
 }
 
 

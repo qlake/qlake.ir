@@ -4,10 +4,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
-	<link rel="stylesheet" href="<?= assets('/css/master.css') ?>">
-	<link rel="stylesheet" href="<?= assets('/css/docs.css') ?>">
-	<link rel="stylesheet" href="<?= assets('/css/prism.css') ?>">
-	<link rel="stylesheet" href="<?= assets('/css/syntax.css') ?>">
+	<link rel="stylesheet" href="<?= asset('css/master.css') ?>">
+	<link rel="stylesheet" href="<?= asset('css/docs.css') ?>">
+	<link rel="stylesheet" href="<?= asset('css/prism.css') ?>">
+	<link rel="stylesheet" href="<?= asset('css/syntax.css') ?>">
 </head>
 <body>
 
@@ -42,7 +42,7 @@
 	</nav>
 </footer>
 
-<script src="<?= assets('/js/prism.js') ?>"></script>
+<script src="<?= asset('/js/prism.js') ?>"></script>
 <script>
 	Prism.languages.nginx = Prism.languages.extend('clike', {
 comment: {
