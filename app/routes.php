@@ -64,6 +64,12 @@ class Str
 	}
 }
 
+
+class Date
+{
+
+}
+
 Route::any('/', function()
 {
 	//echo Stringy\StaticStringy::toUpperCase('sdf sd fs dfsdf sdf ');
@@ -71,20 +77,17 @@ Route::any('/', function()
 	//print_r(\Request::getAllQuery());
 
 
-class A
-{
-}
- 
-class_alias('A', 'B');
- 
-$object = new B;
- 
-$r = new ReflectionClass('B');
-var_dump($r->getName());
 
+	Payment::request(1000, 1);
 
-
-	
+	if (Payment::isReady())
+	{
+		//Payment::redirect();
+	}
+	else
+	{
+		$error = Payment::getRequestError();
+	}
 
 
 

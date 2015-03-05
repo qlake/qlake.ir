@@ -41,6 +41,11 @@ class DB extends Qlake\Architecture\Iwan
 	public static $provider = 'db';
 }
 
+class Payment extends Qlake\Architecture\Iwan
+{
+	public static $provider = 'payment';
+}
+
 
 
 App::singleton('router', function($app)
@@ -123,6 +128,16 @@ App::singleton('cache', function($app)
 App::singleton('html', function($app)
 {
 	return new Qlake\Html\Html();
+});
+
+
+
+App::singleton('payment', function($app)
+{
+	//print_r(Config::get('payment.gateways')['saman']);exit;
+	$gateway = new Qlake\Payment\Gateway\Saman(Config::get('payment.gateways')['saman']);
+
+	return new Qlake\Payment\Payment($gateway);
 });
 
 
