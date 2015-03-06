@@ -11,6 +11,13 @@
 //echo '<pre>';
 
 
+
+function is_regex($str0) {
+    $regex = "/^\/[\s\S]+\/$/";
+    return preg_match($regex, $str0) !== false;
+}
+
+
 function sortArrayByArray(Array $array, Array $orderArray) {
     $ordered = array();
     foreach($orderArray as $key) {
@@ -26,17 +33,26 @@ function sortArrayByArray(Array $array, Array $orderArray) {
 
 function asset($path)
 {
-	$baseDir = str_replace('\\', '/', dirname(dirname($_SERVER['SCRIPT_NAME'])));
+	$baseDir = rtrim(str_replace('\\', '/', dirname(dirname($_SERVER['SCRIPT_NAME']))), '/');
 
 	return $baseDir .'/'. $path;
 }
 
+Route::get('/', function($t =54654654654){
+	echo 'asdasd' . $t;
+});
+
 
 mb_internal_encoding("UTF-8");
+/*
+header('Content-Type: text/plain');
+	Route::get('ghjfg/{id?}', function(){});
 
+	$route->compile();
 
+	print_r($route);exit();*/
 
-Route::get('docs/{page?}', function($page = 'installation')
+Route::get('docs/{page?:\w+}', function($page = 'installation')
 {
 	$md = new ParsedownExtra();
 	
@@ -70,12 +86,18 @@ class Date
 
 }
 
-Route::any('/', function()
+Route::any('/dfsdf', function()
 {
 	//echo Stringy\StaticStringy::toUpperCase('sdf sd fs dfsdf sdf ');
 	//print_r(\Request::getMethod());
 	//print_r(\Request::getAllQuery());
 
+
+
+	$url = 'http://username:password@hostname/path/dfgs/sdf/sdf///?arg=value#anchor';
+
+
+	return;
 
 
 	Payment::request(1000, 1);

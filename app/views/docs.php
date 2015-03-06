@@ -42,7 +42,7 @@
 	</nav>
 </footer>
 
-<script src="<?= asset('/js/prism.js') ?>"></script>
+<script src="<?= asset('js/prism.js') ?>"></script>
 <script>
 	Prism.languages.nginx = Prism.languages.extend('clike', {
 comment: {
