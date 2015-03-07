@@ -38,7 +38,7 @@ function asset($path)
 	return $baseDir .'/'. $path;
 }
 
-Route::get('/', function($t =54654654654){
+Route::get('/c', function($t =54654654654){
 	echo 'asdasd' . $t;
 });
 
@@ -70,13 +70,20 @@ Route::get('docs/{page?:\w+}', function($page = 'installation')
 	return View::render('docs')->by('content', $content);
 });
 
-class Str
+class Str extends Stringy\Stringy
 {
-	public $driver = '';
+	protected $driver;
 
 	function __construct()
 	{
-		$this->driver = Stringy\StaticStringy::create('');	
+		//$this->driver = Stringy\StaticStringy::create('');	
+	}
+
+
+
+	public function __call($method, $args)
+	{
+		//if
 	}
 }
 
@@ -86,19 +93,16 @@ class Date
 
 }
 
-Route::any('/dfsdf', function()
+
+
+
+Route::any('/', function()
 {
 	//echo Stringy\StaticStringy::toUpperCase('sdf sd fs dfsdf sdf ');
 	//print_r(\Request::getMethod());
 	//print_r(\Request::getAllQuery());
 
-
-
-	$url = 'http://username:password@hostname/path/dfgs/sdf/sdf///?arg=value#anchor';
-
-
-	return;
-
+return date('Y-m-d H:i:s', -10000000000000);
 
 	Payment::request(1000, 1);
 
