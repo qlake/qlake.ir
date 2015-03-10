@@ -102,7 +102,7 @@ Route::any('/', function()
 	//print_r(\Request::getMethod());
 	//print_r(\Request::getAllQuery());
 
-return date('Y-m-d H:i:s', -10000000000000);
+return date('Y-m-d H:i:s', -1000000000);
 
 	Payment::request(1000, 1);
 
