@@ -30,6 +30,7 @@ pre[class*="language-"]{
 	border-radius: 0px;
 	margin: 10px 0 20px 0;
 	border-left: 2px solid #E2CCAD;
+	max-height: none;
 }
 
 /**/
