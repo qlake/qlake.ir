@@ -10,10 +10,17 @@ return [
 		'saman' =>
 		[
 			'driver'      => 'Saman',
-			'terminalId'  => '10151012',
-			'requestUrl'  => 'https://sep.shaparak.ir/Payments/InitPayment.asmx?wsdl',
-			'paymentUrl'  => 'https://sep.shaparak.ir/Payment.aspx',
-			'redirectUrl' => 'root',
+			'terminalId'  => '21056352',//21056352-10151012
+			'callbackUrl' => 'http://2.182.224.73/qlake/qlake.ir/back',
+		],
+
+		'mellat' =>
+		[
+			'driver'       => 'Mellat',
+			'terminalId'   => '802802',
+			'userName'     => 'rahahost',
+			'userPassword' => 'ra94ha',
+			'callbackUrl'  => 'http://2.182.224.73/qlake/qlake.ir/back',
 		],
 
 	],
