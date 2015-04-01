@@ -38,6 +38,7 @@ function asset($path)
 	return $baseDir .'/'. $path;
 }
 
+
 Route::get('/c', function($t =54654654654){
 	echo 'asdasd' . $t;
 });
@@ -52,23 +53,10 @@ header('Content-Type: text/plain');
 
 	print_r($route);exit();*/
 
-Route::get('docs/{page?:\w+}', function($page = 'installation')
-{
-	$md = new ParsedownExtra();
-	
-	$path = __DIR__ . "/../docs/dev/fa/$page.md";
 
-	if (!file_exists($path))
-	{
-		$path = __DIR__ . "/../docs/dev/fa/under_construction.md";
-	}
-	
-	$text = file_get_contents($path);
+$r;
 
-	$content = $md->text($text);
 
-	return View::render('docs')->by('content', $content);
-});
 
 class Str extends Stringy\Stringy
 {
@@ -94,6 +82,25 @@ class Date
 }
 
 
+Route::get('docs/{page?:\w+}', function($page = 'installation')
+{
+	$md = new ParsedownExtra();
+
+	$path = __DIR__ . "/../docs/dev/fa/$page.md";
+
+	if (!file_exists($path))
+	{
+		$path = __DIR__ . "/../docs/dev/fa/under_construction.md";
+	}
+
+	$text = file_get_contents($path);
+
+	$content = $md->text($text);
+	
+	return View::render('docs')->by('content', $content);
+});
+
+
 
 
 Route::any('/', function()
@@ -102,18 +109,8 @@ Route::any('/', function()
 	//print_r(\Request::getMethod());
 	//print_r(\Request::getAllQuery());
 
-return date('Y-m-d H:i:s', -1000000000);
 
-	Payment::request(1000, 1);
-
-	if (Payment::isReady())
-	{
-		//Payment::redirect();
-	}
-	else
-	{
-		$error = Payment::getRequestError();
-	}
+	//print_r(postPayment());exit;
 
 
 
@@ -138,4 +135,60 @@ return date('Y-m-d H:i:s', -1000000000);
 			
 		})->toSql();
 
+});
+
+
+
+Route::any('pay', function()
+{
+
+	$gateway = new Qlake\Payment\Gateway\Saman(Config::get('payment.gateways')['saman']);
+	//$gateway = new Qlake\Payment\Gateway\Mellat(Config::get('payment.gateways')['mellat']);
+
+	$payment = new Qlake\Payment\Payment($gateway);
+
+	$purchase = $payment->purchase(1000, -19);
+
+	if ($purchase->send())
+	{
+		$data = $purchase->getData();
+
+		//print_r($data);
+		$purchase->redirect();
+	}
+	else
+	{
+		$error = $payment->getRequestError();
+		var_dump($error);
+	}
+
+});
+
+Route::any('back', function()
+{
+
+	$gateway = new Qlake\Payment\Gateway\Saman(Config::get('payment.gateways')['saman']);
+
+	$payment = new Qlake\Payment\Payment($gateway);
+
+	if ($payment->purchase(1000, -19, 'token')->isSuccessfulResponse())
+	{
+		$data = $payment->getResponseData();
+
+		print_r($data);
+
+		if ($payment->verify())
+		{
+			// ok
+		}
+		else
+		{
+			$payment->reverse();
+		}
+	}
+	else
+	{
+		$error = $payment->getResponseError();
+		print_r($error);
+	}
 });
